@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Mexc trading bot</title>
+		<script type="text/javascript">
+			const baseEndpoint = "https://api.mexc.com";
+			function getBalances()
+			{
+				
+			}
+			
+			const checkPing = () => 
+			{
+				let pingRequest = new XMLHttpRequest();
+				pingRequest.onLoad = () => {
+					console.log("1");
+				};
+				pingRequest.open("GET",baseEndpoint + "/api/v3/ping");
+				pingRequest.setRequestHeader( 'Access-Control-Allow-Origin', 'https://api.mexc.com');
+				pingRequest.send();
+			}
+		</script>
+	</head>
+	<body>
+		Ping: <span id="ping"></span><button onClick="checkPing()">Refresh</button><br>
+		Balances: <br>
+		BTC: <br>
+		USDT: <br>
+	</body>
+</html>
