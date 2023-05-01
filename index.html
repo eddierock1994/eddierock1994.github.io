@@ -15,8 +15,6 @@
 					console.log("1");
 				};
 				pingRequest.open("GET",baseEndpoint + "/api/v3/ping");
-				pingRequest.setRequestHeader( 'Access-Control-Allow-Origin', '*');
-				pingRequest.setRequestHeader( 'Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
 				pingRequest.send();
 			}
 		</script>
